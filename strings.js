@@ -83,8 +83,8 @@ function reverseRecursive(s, rs = '') {
     if (s.length === 0) {
         return rs;
     }
-    const sub = s.split().pop();
-    return reverse(s, rs + sub);
+    const sub = s.split();
+    return reverse(sub.join(''), rs + sub.pop());
 }
 // console.log(reverse('vasu'));
 // console.log(reverseRecursive('vasu'));
